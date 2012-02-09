@@ -1,11 +1,11 @@
 var http = require("http");
 
+var count = 0+0;
 function start() {
-    var counter;
   function onRequest(request, response) {
     console.log("Request received.");
     response.writeHead(200, {"Content-Type": "text/plain"});
-    response.write("Hello what's up visitor #" + counter++);
+    response.write("Hello what's up visitor #"+(++count));
     response.end();
   }
 
